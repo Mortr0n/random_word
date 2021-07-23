@@ -10,16 +10,21 @@
 </head>
 <body>
     <div id="wrapper">
-        
+       
             <h2 id="title" class="center">
+                Number of Generated words:{{request.session.counter}}
+                <br>
                 Test Title 2021
             </h2>
             <h1 id="random_word" class="center">
-                Test Word 2021 
+                {{newWord}} 
             </h1>
         
+        <form action="/make_word" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Generate" id="submit_button" class="center">
+        </form>
         
-        <input type="submit" value="Generate" id="submit_button" class="center">
     </div>
 </body>
 </html>
