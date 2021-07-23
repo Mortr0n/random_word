@@ -19,3 +19,7 @@ def make_word(request):
     # request.session['newWord'] = {'word': request.POST[get_random_string(length=14)]}
     # print(get_random_string(length=14))
     return redirect('/')
+
+def reset(request):
+    request.session['counter'] = 0
+    return redirect('/')

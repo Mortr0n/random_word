@@ -13,7 +13,7 @@
        
             <h2 id="title" class="center">
                 Number of Generated words:{{request.session.counter}}
-                <br>
+                <br><!--  fix these later -->
                 Word Generator
             </h2>
             <h1 id="random_word" class="center">
@@ -23,6 +23,11 @@
         <form action="/make_word" method="POST">
             {% csrf_token %}
             <input type="submit" value="Generate" id="submit_button" class="center">
+        </form>
+        <br><!--  fix these later -->
+        <form action=/reset method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Reset" id="reset_button" class="center">
         </form>
         
     </div>
